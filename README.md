@@ -3,7 +3,7 @@
 # MSJ-Projekt: Dokumentation
 
 Willkommen in der Dokumentation zum MSJ-Projekt.  
-Hier findest du alle technischen Anleitungen, Informationen zur Projektstruktur, Rollenverteilung und Beispielcode.
+Hier findest du alle technischen Anleitungen und Beispielcode.
 
 ## Inhalt
 
@@ -12,4 +12,4 @@ Hier findest du alle technischen Anleitungen, Informationen zur Projektstruktur,
 
 ## Mitarbeit
 
-Pull Requests und Feedback sind willkommen – siehe [CONTRIBUTING.md](CONTRIBUTING.md)
+Pull Requests und Feedback sind willkommen!
