@@ -101,6 +101,17 @@ int main() {
 
 ## Schritt 7: CMakeLists.txt erstellen
 
+**Zweck:** Diese Datei dient zur Konfiguration des CMake-Systems. CMake ist ein Build-Tool, das Quellcode-Projekte unabhängig von Betriebssystem und Compiler konfiguriert. Die Datei `CMakeLists.txt` gibt an, wie das Projekt zu bauen ist:
+
+- Der Projektname (`project(OpenCVWebcam)`)
+- Die verwendete C++-Version (`C++17`)
+- Wo sich Header-Dateien befinden (`include_directories`)
+- Wo sich Bibliotheken befinden (`link_directories`)
+- Welche Quellcode-Dateien kompiliert werden sollen (`add_executable`)
+- Gegen welche Bibliotheken gelinkt werden soll (`target_link_libraries`)
+
+**Inhalt:**
+
 ```cmake
 cmake_minimum_required(VERSION 3.10)
 project(OpenCVWebcam)
@@ -124,7 +135,16 @@ target_link_libraries(main
 
 ## Schritt 8: Build-Task in VS Code konfigurieren
 
-In `.vscode/tasks.json`:
+**Zweck:** Diese Konfiguration befindet sich in `.vscode/tasks.json` und definiert, wie der Build-Vorgang in VS Code ablaufen soll. Damit kann man den Build mit einem Tastenkürzel (standardmäßig `Cmd + Shift + B`) auslösen.
+
+Der Task definiert:
+- Den C++-Compiler (`clang++`)
+- Die notwendigen Include- und Library-Pfade für OpenCV
+- Die zu linkenden OpenCV-Komponenten (z. B. `-lopencv_core`)
+- Die zu kompilierende Datei (`main.cpp`)
+- Den Namen des erzeugten Programms (`-o main`)
+
+**Inhalt:**
 
 ```json
 {
@@ -176,3 +196,10 @@ Ein Fenster mit dem Webcam-Bild sollte erscheinen. Mit `ESC` kannst du es schlie
 ## Hinweise
 - Stelle sicher, dass deine Webcam vom System freigegeben ist (Systemeinstellungen > Sicherheit).
 - Wenn du Apple Silicon (M1/M2/M3) nutzt und Probleme auftreten, prüfe ggf. die Brew-Architektur (`/opt/homebrew` statt `/usr/local`).
+
+---
+
+## Nächster Teil: PortAudio mit VS Code auf dem Mac
+
+Die Einrichtung von PortAudio funktioniert ähnlich. Es wird ebenfalls über Homebrew installiert und in ein C++-Projekt mit Visual Studio Code integriert. Die Dokumentation dazu folgt im nächsten Abschnitt.
+
