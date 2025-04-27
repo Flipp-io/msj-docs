@@ -12,4 +12,4 @@ Hier findest du alle technischen Anleitungen und Beispielcode.
 
 ## Mitarbeit
 
-Pull Requests und Feedback sind willkommen!
+Feedback sind willkommen!
